@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply font-semibold py-0 px-4 focus:outline-none transition duration-200 bg-slate-300 ease-in-out text-slate-800 rounded-2xl ;
+  }
+
+/* Hide scrollbar for all elements */
+.no-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+
