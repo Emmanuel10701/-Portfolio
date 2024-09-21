@@ -6,7 +6,6 @@ import { MdMarkEmailRead } from 'react-icons/md';
 import { FaPhone } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,14 +27,26 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      await emailjs.sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        e.currentTarget,
-        process.env.REACT_APP_EMAILJS_USER_ID
-      );
-      toast.success('Your message has been successfully sent!');
-      setFormData({ name: '', email: '', message: '' }); // Clear form fields
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+
+      if (data.error) {
+        toast.error(data.error);
+      } else {
+        toast.success('Your message has been successfully sent!');
+        setFormData({ name: '', email: '', message: '' }); // Clear form fields
+      }
     } catch (error) {
       toast.error('Oops! Something went wrong. Please try again.');
       console.error(error);
