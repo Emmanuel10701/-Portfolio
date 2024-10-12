@@ -7,96 +7,29 @@ import React from 'react';
 // My project data
 export const projects = [
   {
-    name: 'Appartment Website',
-    description: 'In this project I have been able to sharpen my skill of higher order function in js and react.',
+    name: 'Apartment Website',
+    description: 'A sleek platform showcasing rental listings, designed to enhance user experience with advanced JavaScript and React features.',
     url: 'https://example.com/project-one',
     image: '/images/project1.avif'
   },
   {
-    name: 'Data scraping site',
-    description: 'A brief description of Project Two.',
-    url: 'https://example.com/project-two',
-    image: '/images/project2.webp'
-  },
-  {
-    name: 'Modern Ecomerce & Dashboard',
-    description: 'A brief description of Project Three.',
+    name: 'Modern E-commerce & Dashboard',
+    description: 'An all-in-one solution for online shopping and inventory management, combining a user-friendly interface with robust backend capabilities.',
     url: 'https://example.com/project-three',
     image: '/images/project3.jpg'
   },
   {
-    name: 'Discord Chatting Site',
-    description: 'A brief description of Project Four.',
-    url: 'https://example.com/project-four',
-    image: '/images/project4.jpg'
-  },
-  {
     name: 'Job Hiring Site',
-    description: 'A brief description of Project Five.',
+    description: 'A comprehensive recruitment platform that connects employers and job seekers, featuring streamlined applications and intuitive search functionalities.',
     url: 'https://example.com/project-five',
     image: '/images/project5.jpg'
   },
   {
     name: 'Health Care System',
-    description: 'A brief description of Project Six.',
+    description: 'A digital solution for managing patient data and appointments, focusing on accessibility and efficiency for healthcare providers and patients alike.',
     url: 'https://example.com/project-six',
     image: '/images/project6.avif'
   },
-  {
-    name: 'Travel Advisor',
-    description: 'A brief description of Project Seven.',
-    url: 'https://example.com/project-seven',
-    image: '/images/project7.avif'
-  },
-  {
-    name: 'E-learning Portal',
-    description: 'A brief description of Project Eight.',
-    url: 'https://example.com/project-eight',
-    image: '/images/project8.jpeg'
-  }
-];
-
-export const images = [
-  {
-    image1: '/assets/typescript.png',
-    image2: '/assets/next.jpg',
-    image3: '/assets/tailwiind.png',
-  },
-  {
-    image1: '/assets/next.jpg',
-    image2: '/assets/tailwiind.png',
-    image3: '/assets/typescript.png',
-  },
-  {
-    image1: '/assets/react.png',
-    image2: '/assets/mysql.png',
-    image3: '/assets/tailwiind.png',
-  },
-  {
-    image1: '/assets/django.png',
-    image2: '/assets/bootstrap.png',
-    image3: '/assets/mysql.png',
-  },
-  {
-    image1: '/assets/next.jpg',
-    image2: '/assets/prisma.png',
-    image3: '/assets/typescript.png',
-  },
-  {
-    image1: '/assets/next.jpg',
-    image2: '/assets/typescript.png',
-    image3: '/assets/mongo.webp',
-  },
-  {
-    image1: '/assets/next.jpg',
-    image2: '/assets/typescript.png',
-    image3: '/assets/tailwiind.png',
-  },
-  {
-    image1: '/assets/django.png',
-    image2: '/assets/react.png',
-    image3: '/assets/mysql.png'
-  }
 ];
 
 // Function to split text into an array of words
@@ -216,56 +149,6 @@ const Page = () => {
                   ))}
                 </motion.p>
 
-                {/* Add images here with spin effect */}
-                <div className="flex gap-2 mb-4">
-                  {images[index] && (
-                    <>
-                      <motion.div
-                        className="relative w-7 h-7"
-                        variants={spinEffect}
-                        initial="initial"
-                        animate="animate"
-                      >
-                        <Image 
-                          src={images[index].image1} 
-                          alt={`Image 1 for ${project.name}`} 
-                          layout="fill" 
-                          objectFit="cover"
-                          className="w-full h-full rounded"
-                        />
-                      </motion.div>
-                      <motion.div
-                        className="relative w-7 h-7"
-                        variants={spinEffect}
-                        initial="initial"
-                        animate="animate"
-                      >
-                        <Image 
-                          src={images[index].image2} 
-                          alt={`Image 2 for ${project.name}`} 
-                          layout="fill" 
-                          objectFit="cover"
-                          className="w-full h-full rounded"
-                        />
-                      </motion.div>
-                      <motion.div
-                        className="relative w-7 h-7"
-                        variants={spinEffect}
-                        initial="initial"
-                        animate="animate"
-                      >
-                        <Image 
-                          src={images[index].image3} 
-                          alt={`Image 3 for ${project.name}`} 
-                          layout="fill" 
-                          objectFit="cover"
-                          className="w-full h-full rounded"
-                        />
-                      </motion.div>
-                    </>
-                  )}
-                </div>
-                
                 <span
                   className="block text-blue-500 hover:underline text-sm text-center cursor-pointer"
                   onClick={() => window.open(project.url, '_blank', 'noopener,noreferrer')}

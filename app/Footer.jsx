@@ -26,8 +26,8 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="#resume">
-                <span className="hover:text-slate-600 text-sm hover:underline cursor-pointer">Resume</span>
+              <Link href="/path/to/resume.pdf" download>
+                <span className="hover:text-slate-600 text-sm hover:underline cursor-pointer">Download Resume</span>
               </Link>
             </li>
             <li>
@@ -50,10 +50,10 @@ const Footer = () => {
         <div>
           <h2 className="text-lg font-semibold mb-2">Contact</h2>
           <p className="text-gray-400">
-            Email: <span className="font-bold">emmanuelmakau90@gmail.com</span>
+            Email: <a href="mailto:emmanuelmakau90@gmail.com" className="font-bold hover:underline">emmanuelmakau90@gmail.com</a>
           </p>
           <p className="text-gray-400">
-            Phone: <span className="font-bold">079 347 2960</span>
+            Phone: <a href="tel:+0793472960" className="font-bold hover:underline">079 347 2960</a>
           </p>
           <div className="mt-2 flex space-x-4">
             <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center cursor-pointer">

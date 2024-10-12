@@ -84,7 +84,7 @@ const About = () => {
             animate="animate"
           >
             <Image
-              src="/images/logoo.webp" 
+              src="/images/spiner.png" 
               alt="Loading..."
               layout="fill"
               objectFit="contain"
@@ -102,8 +102,10 @@ const About = () => {
             About Me
           </motion.h1>
           <p className="opacity-80 mb-4 text-xs md:text-sm lg:text-md xl:text-lg text-slate-400">
-            Hi, I'm Emmanuel, a Fullstack Software Developer based in Kenya. I have 7 months of experience in web applications, skilled in React, Next.js, Tailwind CSS, Python, Django, MongoDB, Prisma, and MySQL. I have a strong foundation in both frontend and backend development, with a passion for best practices and collaborative learning.
-          </p>
+
+          Sure! Here’s your introduction without the experience part:
+
+Hi, I'm Emmanuel, a Fullstack Software Developer based in Kenya. I'm skilled in React, Next.js, Tailwind CSS, Python, Django, MongoDB, Prisma, and MySQL. I have a strong foundation in both frontend and backend development, with a passion for best practices and collaborative learning.          </p>
 
           <motion.h1
             className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-500 my-10"
@@ -144,19 +146,19 @@ const About = () => {
           >
             <motion.div className='flex flex-col items-center' >
               <h1 className="text-2xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-500">
-                14+
+                5+
               </h1>
               <p className='text-sm text-gray-500'>Happy Clients</p>
             </motion.div>
             <motion.div className='flex flex-col items-center justify-center' >
               <h1 className="text-2xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-500">
-                7+
+                1+
               </h1>
-              <p className='text-sm text-gray-500'>Months of Experience</p>
+              <p className='text-sm text-gray-500'>years of Experience</p>
             </motion.div>
             <motion.div className='flex flex-col items-center' >
               <h1 className="text-2xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-500">
-                40+
+                10+
               </h1>
               <p className='text-sm text-gray-500'>Projects</p>
             </motion.div>
