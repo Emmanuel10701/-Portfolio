@@ -9,16 +9,12 @@ cloudinary.config({
 });
 
 // Disable body parsing for the API route
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+export const dynamic = 'force-dynamic'; // Or use 'force-static' depending on your use case
 
 const uploadImage = async (req, res) => {
   const form = new formidable.IncomingForm();
 
-  form.parse(req, async (err, _, files) => { // Use `_` to ignore fields
+  form.parse(req, async (err, _, files) => {
     if (err) return res.status(500).json({ error: 'Image upload failed' });
 
     const file = files.file[0];
