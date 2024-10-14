@@ -9,7 +9,7 @@ cloudinary.config({
 });
 
 // Disable body parsing for the API route
-export const config = {
+const config = {
   api: {
     bodyParser: false,
   },
@@ -17,7 +17,7 @@ export const config = {
 
 const uploadImage = async (req, res) => {
   const form = new formidable.IncomingForm();
-  
+
   form.parse(req, async (err, _, files) => { // Use `_` to ignore fields
     if (err) return res.status(500).json({ error: 'Image upload failed' });
 
@@ -31,6 +31,8 @@ const uploadImage = async (req, res) => {
   });
 };
 
-
-// Export the default function for the API route
-export default uploadImage;
+// Export using the format suggested by Netlify
+export default {
+  handler: uploadImage,
+  config,
+};
