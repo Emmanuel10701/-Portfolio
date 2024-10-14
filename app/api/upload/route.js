@@ -18,7 +18,7 @@ export const config = {
 const uploadImage = async (req, res) => {
   const form = new formidable.IncomingForm();
   
-  form.parse(req, async (err, fields, files) => {
+  form.parse(req, async (err, _, files) => { // Use `_` to ignore fields
     if (err) return res.status(500).json({ error: 'Image upload failed' });
 
     const file = files.file[0];
@@ -31,4 +31,6 @@ const uploadImage = async (req, res) => {
   });
 };
 
+
+// Export the default function for the API route
 export default uploadImage;
