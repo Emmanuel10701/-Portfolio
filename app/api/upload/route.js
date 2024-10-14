@@ -9,7 +9,7 @@ cloudinary.config({
 });
 
 // Disable body parsing for the API route
-const config = {
+export const config = {
   api: {
     bodyParser: false,
   },
@@ -31,8 +31,5 @@ const uploadImage = async (req, res) => {
   });
 };
 
-// Export using the format suggested by Netlify
-export default {
-  handler: uploadImage,
-  config,
-};
+// Export the uploadImage function as default
+export default uploadImage;
