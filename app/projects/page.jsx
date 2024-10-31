@@ -21,7 +21,7 @@ export const projects = [
   {
     name: 'Job Hiring Site',
     description: 'A comprehensive recruitment platform that connects employers and job seekers, featuring streamlined applications and intuitive search functionalities.',
-    url: 'https://healthcare-project-sepia.vercel.app', // Updated URL (assuming this was meant for jobs)
+    url: 'https://healthcare-project-sepia.vercel.app', // Updated URL
     image: '/images/project5.jpg'
   },
   {
@@ -32,36 +32,45 @@ export const projects = [
   },
 ];
 
-// The rest of your component code remains unchanged...
+// Animation settings
+const animationSettings = {
+  initial: { opacity: 0, scale: 0.9 },
+  animate: { opacity: 1, scale: 1 },
+  transition: { duration: 0.5, ease: "easeInOut" },
+};
 
+// Function to split text into an array of words
+const splitTextIntoWords = (text) => {
+  return text.split(' ').map((word, index) => ({ word, index }));
+};
+
+// Page component
 const Page = () => {
   return (
     <section id="portfolio" className="py-8 px-4 sm:px-8 md:px-10 bg-slate-100">
       <div className="container mx-auto px-4">
-      <motion.h2
-  className="text-center text-2xl sm:text-3xl lg:text-4xl mx-auto my-10 bg-gradient-to-r from-orange-400 via-purple-500 to-indigo-600 bg-clip-text text-transparent"
-  variants={animationSettings}
-  initial="hidden"
-  animate="animate"
->
-  My Projects
-</motion.h2>
-
+        <motion.h2
+          className="text-center text-2xl sm:text-3xl lg:text-4xl mx-auto my-10 bg-gradient-to-r from-orange-400 via-purple-500 to-indigo-600 bg-clip-text text-transparent"
+          variants={animationSettings}
+          initial="hidden"
+          animate="animate"
+        >
+          My Projects
+        </motion.h2>
 
         <motion.p
           className="text-center w-full mx-auto my-8 mb-20 text-slate-400 text-sm"
-          variants={textRevealVariants}
+          variants={animationSettings}
           initial="hidden"
-          animate="visible"
+          animate="animate"
         >
           {splitTextIntoWords('Welcome to my projects! Here, you’ll find a selection of projects that showcase my growth and skills as a developer. Each project highlights different aspects of my skills in creating responsive websites to developing complex applications.').map(({ word, index }) => (
             <motion.span
               key={index}
               className="inline-block mr-2"
-              variants={textRevealVariants}
+              variants={animationSettings}
               initial="hidden"
-              animate="visible"
-              custom={index}
+              animate="animate"
             >
               {word}{" "}
             </motion.span>
@@ -97,18 +106,17 @@ const Page = () => {
                 </motion.h3>
                 <motion.p
                   className="text-gray-400 mb-4 text-[12px]"
-                  variants={textRevealVariants}
+                  variants={animationSettings}
                   initial="hidden"
-                  animate="visible"
+                  animate="animate"
                 >
                   {splitTextIntoWords(project.description).map(({ word, index }) => (
                     <motion.span
                       key={index}
                       className="inline-block mr-2"
-                      variants={textRevealVariants}
+                      variants={animationSettings}
                       initial="hidden"
-                      animate="visible"
-                      custom={index}
+                      animate="animate"
                     >
                       {word}{" "}
                     </motion.span>

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { usePathname } from 'next/navigation'; // Import usePathname
 
 // Navbar
@@ -18,6 +18,19 @@ const Navbar = () => {
   const handleLinkClick = () => {
     setOpen(false); // Close the menu when a link is clicked
   };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target) && open) {
+      setOpen(false); // Close the menu if clicked outside
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [open]);
 
   const links = [
     { name: 'Home', path: '/' },
@@ -35,7 +48,10 @@ const Navbar = () => {
         </div>
 
         {/* Menu for smaller screens */}
-        <ul className={`fixed top-0 right-0 h-screen w-3/4 bg-green-800 text-white transform ${open ? 'translate-x-0 z-50' : 'translate-x-full'} transition-transform duration-300 ease-in-out flex flex-col items-start pt-16 md:hidden`} ref={menuRef}>
+        <ul
+          className={`fixed top-0 right-0 h-screen w-3/4 bg-green-800 text-white transform ${open ? 'translate-x-0 z-50' : 'translate-x-full'} transition-transform duration-300 ease-in-out flex flex-col items-start pt-16 md:hidden`}
+          ref={menuRef}
+        >
           <li className="absolute top-8 right-8">
             <button onClick={handleToggle} className="text-white text-4xl z-10 flex items-center justify-center mb-8">
               &times;
@@ -44,7 +60,7 @@ const Navbar = () => {
           {links.map((link, index) => (
             <li key={index} className="p-4">
               <Link href={link.path} onClick={handleLinkClick}>
-                <span className="text-white text-sm hover:text-slate-400">
+                <span className={`text-white text-sm hover:text-slate-400 ${pathname === link.path ? 'font-bold text-blue-500' : ''}`}>
                   {link.name}
                 </span>
               </Link>
@@ -58,7 +74,7 @@ const Navbar = () => {
             <li key={index} className="p-4">
               <Link href={link.path} onClick={handleLinkClick}>
                 <span
-                  className={`text-md ${pathname === link.path ? 'text-zinc-900 font-bold' : 'text-zinc-400 hover:text-slate-400'}`}
+                  className={`text-md ${pathname === link.path ? 'text-blue-500 font-bold' : 'text-zinc-400 hover:text-slate-400'}`}
                 >
                   {link.name}
                 </span>
