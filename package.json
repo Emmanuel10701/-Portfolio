@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.6",
     "cloudinary": "^2.5.1",
     "formidable": "^3.5.1",
     "framer-motion": "^11.3.19",
