@@ -103,8 +103,6 @@ const About = () => {
           </motion.h1>
           <p className="opacity-80 mb-4 text-xs md:text-sm lg:text-md xl:text-lg text-slate-400">
 
-          Sure! Here’s your introduction without the experience part:
-
 Hi, I'm Emmanuel, a Fullstack Software Developer based in Kenya. I'm skilled in React, Next.js, Tailwind CSS, Python, Django, MongoDB, Prisma, and MySQL. I have a strong foundation in both frontend and backend development, with a passion for best practices and collaborative learning.          </p>
 
           <motion.h1
