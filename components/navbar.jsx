@@ -85,13 +85,13 @@ const Navbar = () => {
 
         {/* Social Icons */}
         <div className="hidden md:flex items-center space-x-4 ml-3">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="github">
+          <a href="https://github.com/Emmanuel10701" target="_blank" rel="noopener noreferrer" aria-label="github">
             <Image src={'/images/github.png'} alt="github" width={25} height={25} className='cursor-pointer' objectFit='cover' />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="twitter">
+          <a href="https://x.com/EmmanuelJumaste" target="_blank" rel="noopener noreferrer" aria-label="twitter">
             <Image src={'/images/twitter.png'} alt="twitter" width={25} height={25} className='cursor-pointer' objectFit='cover' />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+          <a href="https://www.linkedin.com/in/emmanuel-makau-40a12028b/" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
             <Image src={'/images/linkedin1.png'} alt="linkedin" width={25} height={25} className='cursor-pointer' objectFit='cover' />
           </a>
         </div>

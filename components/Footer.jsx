@@ -16,22 +16,22 @@ const Footer = () => {
           <h2 className="text-lg font-semibold mb-2">Quick Links</h2>
           <ul className="text-slate-800 space-y-1">
             <li>
-              <Link href="#about">
+              <Link href="/about">
                 <span className="hover:text-slate-600 text-sm hover:underline cursor-pointer">About Me</span>
               </Link>
             </li>
             <li>
-              <Link href="#portfolio">
+              <Link href="/projects">
                 <span className="hover:text-slate-600 text-sm hover:underline cursor-pointer">Projects</span>
               </Link>
             </li>
             <li>
-              <Link href="/path/to/resume.pdf" download>
+              <Link href="/assets/Emmanuel_Makau_Resume (12).pdf" download>
                 <span className="hover:text-slate-600 text-sm hover:underline cursor-pointer">Download Resume</span>
               </Link>
             </li>
             <li>
-              <Link href="#services">
+              <Link href="/contact">
                 <span className="hover:text-slate-600 text-sm hover:underline cursor-pointer">Services</span>
               </Link>
             </li>
@@ -56,18 +56,18 @@ const Footer = () => {
             Phone: <a href="tel:+0793472960" className="font-bold hover:underline">079 347 2960</a>
           </p>
           <div className="mt-2 flex space-x-4">
-            <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center cursor-pointer">
+            <Link href="https://x.com/EmmanuelJumaste" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center cursor-pointer">
               <FaTwitter className="mr-2" />
               Twitter
-            </a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center cursor-pointer">
+            </Link>
+            <Link href="https://www.linkedin.com/in/emmanuel-makau-40a12028b/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center cursor-pointer">
               <FaLinkedin className="mr-2" />
               LinkedIn
-            </a>
-            <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600 flex items-center cursor-pointer">
+            </Link>
+            <Link href="https://github.com/Emmanuel10701" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600 flex items-center cursor-pointer">
               <FaGithub className="mr-2" />
               GitHub
-            </a>
+            </Link>
           </div>
         </div>
       </div>
