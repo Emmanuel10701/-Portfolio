@@ -7,22 +7,16 @@ import React from 'react';
 // My project data
 export const projects = [
   {
-    name: 'Apartment Website',
-    description: 'A sleek platform showcasing rental listings, designed to enhance user experience with advanced JavaScript and React features.',
-    url: 'https://apartments-site-rental.vercel.app', // Updated URL
-    image: '/images/project1.avif'
-  },
-  {
     name: 'Modern E-commerce & Dashboard',
     description: 'An all-in-one solution for online shopping and inventory management, combining a user-friendly interface with robust backend capabilities.',
     url: 'https://e-commerce-market-site.vercel.app', // Updated URL
     image: '/images/project3.jpg'
   },
   {
-    name: 'Job Hiring Site',
-    description: 'A comprehensive recruitment platform that connects employers and job seekers, featuring streamlined applications and intuitive search functionalities.',
-    url: 'https://healthcare-project-sepia.vercel.app', // Updated URL
-    image: '/images/project5.jpg'
+    name: 'Apartment Website',
+    description: 'A sleek platform showcasing rental listings, designed to enhance user experience with advanced JavaScript and React features.',
+    url: 'https://apartments-site-rental.vercel.app', // Updated URL
+    image: '/images/project1.avif'
   },
   {
     name: 'Health Care System',
@@ -30,6 +24,13 @@ export const projects = [
     url: 'https://healthcare-project-sepia.vercel.app', // Keep this URL or replace as needed
     image: '/images/project6.avif'
   },
+  {
+    name: 'Job Hiring Site',
+    description: 'A comprehensive recruitment platform that connects employers and job seekers, featuring streamlined applications and intuitive search functionalities.',
+    url: 'https://healthcare-project-sepia.vercel.app', // Updated URL
+    image: '/images/project5.jpg'
+  },
+
 ];
 
 // Animation settings
@@ -50,7 +51,7 @@ const Page = () => {
     <section id="portfolio" className="py-8 px-4 sm:px-8 md:px-10 bg-slate-100">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-center text-2xl sm:text-3xl lg:text-4xl mx-auto my-10 bg-gradient-to-r from-orange-400 via-purple-500 to-indigo-600 bg-clip-text text-transparent"
+          className="text-center text-2xl font-bold sm:text-3xl lg:text-4xl mx-auto my-10 bg-gradient-to-r from-orange-400 via-purple-500 to-indigo-600 bg-clip-text text-transparent"
           variants={animationSettings}
           initial="hidden"
           animate="animate"

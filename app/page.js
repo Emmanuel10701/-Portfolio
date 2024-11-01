@@ -23,7 +23,7 @@ const Home = () => {
     setIsDownloading(true);
     setTimeout(() => {
       const link = document.createElement('a');
-      link.href = '/assets/Emmanuel_Makau_Resume (12).pdf'; // Updated path to your PDF
+      link.href = '/assets/my_resume.pdf'; // Updated path to your PDF
       link.download = 'emmanuel-resume.pdf';
       link.click();
       setIsDownloading(false);
