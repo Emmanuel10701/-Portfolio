@@ -60,7 +60,7 @@ const Page = () => {
         </motion.h2>
 
         <motion.p
-          className="text-center w-full mx-auto my-8 mb-20 text-slate-400 text-sm"
+          className="text-center md:w-2/3   w-full mx-auto my-8 mb-20 text-slate-400 text-sm"
           variants={animationSettings}
           initial="hidden"
           animate="animate"
