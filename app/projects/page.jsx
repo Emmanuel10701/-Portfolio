@@ -30,7 +30,7 @@ export const projects = [
   {
     name: "Blog for developers",
     description:
-      "A comprehensive recruitment platform that connects employers and job seekers, featuring streamlined applications and intuitive search functionalities.",
+      "A comprehensive recruitment platform that developers can post their latest updates and also connect with each other to discuss the trending technologies and news in tech.",
     url: "https://developers-home.vercel.app/", // Updated URL
     image: "/images/project5.jpg",
   },
