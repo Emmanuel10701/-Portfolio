@@ -28,10 +28,10 @@ export const projects = [
     image: "/images/project6.avif",
   },
   {
-    name: "Job Hiring Site",
+    name: "Blog for developers",
     description:
       "A comprehensive recruitment platform that connects employers and job seekers, featuring streamlined applications and intuitive search functionalities.",
-    url: "https://healthcare-project-sepia.vercel.app", // Updated URL
+    url: "https://developers-home.vercel.app/", // Updated URL
     image: "/images/project5.jpg",
   },
 ];
