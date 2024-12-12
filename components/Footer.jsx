@@ -26,7 +26,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/assets/my_resume.pdf" download>
+              <Link href="/assets/resume.pdf" download>
                 <span className="hover:text-slate-600 text-sm hover:underline cursor-pointer">Download Resume</span>
               </Link>
             </li>
